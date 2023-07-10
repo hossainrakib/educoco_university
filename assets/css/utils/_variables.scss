@@ -1,0 +1,393 @@
+//text-color
+$teamplate-color:#111;
+$main-color:#21a7d0;
+$white-color:#fff;
+
+// munu link color
+$nav-color:#394459;
+
+// paragrap color
+$para-color:#505050;
+
+//menu categories
+$cat-color:#273c66;
+
+//sub-menu links hover color
+$sub-menu-color:#dddddd;
+$t-color:#fff;
+
+//backgroutd-color
+
+//button hover/theme mani color
+$button-bg:#21a7d0;
+$button-hover-bg:#2db4de;
+
+// theme bg
+$main-bg:#273c66;
+$white-bg:#fff;
+$second-bg:#f3f8f9;
+
+//menu down border
+$border-two-bg:#dcdfe6;
+$border-bg:#7d8aa3;
+//expander icon color
+$nav-expander-bg:#111;
+//mobile menu 
+$mobile-nav-bg:#333;
+$mobile-border-bg:#131313;
+$mobile-arrow-bg:#ddd;
+//categories
+$cat-hover-color:#ccc;
+$cat-overlay-bg:#273c66;
+//newsletter
+$submit-hover-bg:#2e4778;
+//copy-right
+$copy-color:#f3f8f9;
+$s-bg:#2e4778;
+
+//categories-title
+//course-bg
+$course-bg:#c7e8f0;
+$course-round-bg:#b5e2ec;
+$course-action-bg:#16aaca;
+$ratting-bg:#fcb903;
+$review-bg:#f3f8f9;
+$event-border:#c7e8f0;
+//service overlay bg
+
+$services:(1,#273c66), (2,#21a7d0), (3,#772bea) ,(4,#2db4de);
+
+@each $classname, $color in $services {
+    .overlay#{$classname}{
+        &::after{
+            background-color: $color;
+        }
+    }
+}
+//counter-div bg
+
+$counter:('one',#fbf8cc), ('two',#e9fbd5), ('three',#dcf1fd);
+
+@each $classname, $color in $counter {
+    .counter-#{$classname}-bg{
+        background-color: $color;
+    }
+}
+
+//event-div bg
+
+$event:('one',#dcf1fd), ('two',#eaddf8), ('three',#f8f6d1),('four',#f9e8e8);
+
+@each $classname, $color in $event {
+    .event-#{$classname}-bg{
+        background-color: $color;
+    }
+}
+//event-div bg
+
+$categ:('one',#d3fcf8), ('two',#16aaca), ('three',#f9e8e8),('four',#f8f6d1), ('five',#eaddf8), ('six',#e9fbd5);
+
+@each $classname, $color in $categ {
+    .categ-#{$classname}-bg{
+        background-color: $color;
+    }
+}
+//div gap
+.gap{
+    margin:15px;
+    &ed{
+        padding: 15px;
+    }
+    &s{
+        @include respond-below(sm){
+            margin: 0;
+        }
+    }
+    &__gutter{
+        margin:-15px;
+        @include respond-below(xs){
+            margin: -12px;
+        }
+        &s{
+            @include respond-below(sm){
+                margin: 0;
+            }
+        }
+    }
+}
+//section-padding
+
+.section-padding{
+    padding: 100px 0 94px;
+
+    @include respond-between(md, lg) {
+         
+    }
+    @include respond-between(sm, md) {
+         
+    }
+    @include respond-between(xs, sm) {
+         
+    }
+    @include respond-below(md) {
+        padding: 64px 0 70px;
+
+    }
+
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+//button
+button.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    &:focus{
+        box-shadow: none;
+    }
+}
+.btn-style{
+    font-size: 16px;
+    font-weight: 500;
+    color: $white-color;
+    background-color: $button-bg;
+    border-radius: 3px;
+    padding: 12px 50px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    @extend .transition;
+    position: relative;
+    &:hover{
+        background-color: $white-bg;
+        color: $main-color;
+        &::before, &::after{
+            background-color: $main-color;
+
+        }
+    }
+    &::after, &::before{
+        position: absolute;
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $main-color;
+        background-color: $white-bg;
+    }
+    &::before{
+        right: 30px;
+        @include respond-below(xs) {
+            right: 15px;
+          
+        }
+    }
+    &::after{
+        left: 30px;
+        @include respond-below(xs) {
+            left: 15px;
+          
+        }
+    }
+    @include respond-below(xs) {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    &-two{
+        background-color: $white-bg;
+        color: $main-color;
+        &::before, &::after{
+            background-color: $main-color;
+        }
+        &:hover{
+            background-color: $main-color;
+            color: $white-color;
+            &::before, &::after{
+                background-color: $white-bg;
+
+            }
+        }
+    }
+
+
+}
+.btn-course{
+    &:hover{
+        background-color: $teamplate-color !important;
+        color: $white-color;
+    }
+    &::after, &::before{
+        background-color: $white-bg !important;
+    }
+}
+//transition link
+.transition{
+    transition: all .3s ease;
+}
+//body css style
+body{
+    @include font($main-font, 15, 400);
+    @include text($para-color, capitalize, 26px);
+}
+
+//heading family style
+@for $i from 1 to 7 {
+    h#{$i}{
+        font-family: $second-font;
+    }
+}
+
+$size:(h1, 70, 700, 84),(h2, 36, 700, 43),(h3, 24, 700, 29),(h4, 22, 700, 26),(h5, 20, 700, 24),(h6, 15, 400, 26),(p, 18, 400, 30);
+@each $name, $font-size, $font-weight, $line-height in $size {
+    #{$name}{
+        @include typrography($font-size, $font-weight, $line-height)
+    }
+}
+

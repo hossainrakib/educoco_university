@@ -1,0 +1,231 @@
+.events-area{
+    .events{
+        &__wrap{
+
+            @include respond-below(md) {
+                margin-top: 30px;                 
+            }
+            &per{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-right: 60px;
+                margin-bottom: 30px;
+                border: 1px solid $event-border;
+                @include respond-between(md, lg) {
+                    margin-right: 40px;
+                    grid-template-columns: 45% 1fr;
+
+                    &:last-child{
+                        grid-template-columns:  1fr 45%;
+
+                    }
+                    
+                }
+                @include respond-below(md) {
+                 margin-right: 0px;
+                  
+                 grid-template-columns: 35% 1fr;
+
+                    &:last-child{
+                        grid-template-columns:  1fr 35%;
+
+                    }
+                }
+                @include respond-below(xs) {
+                     
+                    grid-template-columns: 1fr;
+   
+                       &:last-child{
+                        grid-template-columns: 1fr;
+   
+                       }
+                   }
+                   
+                &:hover{
+                    .events__image{
+                        img{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+        &__image{
+            overflow: hidden;
+            img{
+                transform: scale(1);
+                @extend .transition;
+            }
+        }
+        &__info{
+            padding: 34px 30px;
+
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+              
+            }
+            @include respond-between(xs, sm) {
+                padding: 25px 30px;
+              
+            }
+            @include respond-below(xs) {
+                padding: 25px 15px;
+              
+            }
+            
+            
+        }
+        &__meta{
+            &__wrap{
+
+            }
+        }
+        &__user{
+            margin-right: 20px;
+
+            color: $para-color;
+            .user__{
+                &icon{
+                    padding-right: 5px;
+                    i{
+    
+                    }
+                }
+                &title{
+                    h6{
+
+                    }
+                }
+            }
+            
+        }
+        &__heading{
+            h3{
+                color: $teamplate-color;
+                margin: 10px 0 14px;
+                line-height: 34px;
+                @extend .transition;
+                
+                @include respond-below(xs) {
+                    @include texts(19, 25)
+  
+                }
+
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+        &__link{
+            position: relative;
+            a{
+                color: $teamplate-color;
+                font-weight: 500;
+                text-transform: uppercase;
+                @extend .transition;
+
+                &:hover{
+                    color: $main-color;
+                
+                }
+ 
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                right: -14px;
+                transform: translateY(-50%);
+                font-size: 20px;
+                @extend .transition;
+            }
+            &:hover{
+                i{
+                    right: -21px;
+                    color: $main-color;
+                }
+            }
+        }
+        &__item{
+            margin-bottom: 30px;
+            background-color: $white-bg;
+            padding: 8px 0;
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-below(md) {
+              
+            }
+            
+            
+        }
+        &__time{
+            min-width: 100px;
+            margin-right: 25px;
+            padding: 11px 0 22px;
+
+            @include respond-below(xs) {
+              margin: 0 0 25px;
+              min-height: 90px;
+
+            }
+            
+            
+        }
+        &__month{
+            span{
+                color: $para-color;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+        &__date{
+            h4{
+                font-size: 50px;
+                font-weight: 700;
+
+                @include respond-between(md, lg) {
+                    font-size: 43px;
+  
+                }
+                
+            }
+        }
+        &__content{
+
+        }
+        &__categ{
+            a{
+                color: $para-color;
+                @extend .transition;
+
+                &:hover{
+                    color: $main-color;
+                }
+            }
+            span{
+                color: $para-color;
+
+            }
+        }
+        &__title{
+            h3{
+                color: $teamplate-color;
+                font-size: 22px;
+                line-height: 33px;
+                @extend .transition;
+
+                @include respond-between(md, lg) {
+                    @include texts(19,33)
+                }
+                
+                
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+
+    }
+}

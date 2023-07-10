@@ -1,0 +1,138 @@
+.hero-area{
+
+    .hero{
+        &__single{
+            height: 100vh;
+            
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+                
+              
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(sm) {
+                
+              
+            }
+            
+        }
+        &__content{
+            position: relative;
+            z-index: 11;
+
+        }
+        &__title{
+            h1{
+                    color: $white-color;
+
+                    @include respond-between(lg, xl) {
+                        @include texts(50, 65);
+
+                    }
+                    @include respond-between(md, lg) {
+                        @include texts(45, 50);
+
+                    }
+                    @include respond-between(sm, md) {
+                        @include texts(39, 50);
+
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(35, 43);
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(25, 35);
+                      
+                    }
+                    
+            }
+       
+        }
+        &__disc{
+            p{
+                color: $white-color;
+                text-transform: initial;
+                margin: 20px 0 40px;
+            }
+        }
+        &__link{
+    
+            a{
+                &:first-child{
+                    margin-right: 40px;
+
+                    @include respond-below(xs){
+                        margin-right: 20px;
+
+                    }
+                }
+            }
+        }
+
+        &.slick-slider{
+            position: relative;
+            .slick-arrow{
+                padding: 0;
+                margin: 0;
+                @include area(40, 40);
+                border-radius: 50%;
+                background-color: $button-bg;
+                border: none;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                z-index: 99;
+                visibility: hidden;
+                opacity: 0;
+                @extend .transition;
+                i{
+                    font-size: 15px;
+                    color: $white-color;
+                }
+                &.slick-prev{
+                    left: 10px;
+                }
+            }
+            &:hover{
+                .slick-arrow{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .slick-next{
+                    right:45px;
+                }
+                .slick-prev{
+                    left: 45px;
+                }
+            }
+        }
+    }
+    .bannar__image{
+        z-index: 0;
+        right: 50px;
+        .image{
+            img{
+
+                @include respond-below(xl) {
+                  max-width: 560px;
+                }
+                @include respond-between(md, lg) {
+                    max-width: 500px;
+  
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+            }
+        }
+    }
+}

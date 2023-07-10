@@ -1,0 +1,95 @@
+.about-area{
+    .about{
+        &__intro{
+            .section__title{
+                h2{
+                    margin: 10px 0 20px;
+                }
+            }
+
+        }
+        &__title{
+            h2{
+
+            }
+            &__sub{
+                h5{
+
+                }
+            }
+        }
+        &__disc{
+            p{
+                color: $para-color;
+            }
+        }
+
+    }
+}
+.counter-area{
+    padding-left: 68px;
+    @include respond-below(md){
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    .counter{
+        &__image{
+            text-align: center;
+            img{
+                max-width: 65px;
+            }
+            &.gpa{
+                img{
+                    max-width: 119px;
+                }
+            }
+        }
+        &__item{
+            padding: 34px 15px;
+            height: 100%;
+            border-radius: 10px;
+
+            @include respond-below(sm){
+                height: auto;
+            }
+        }
+        &__number{
+            a{
+                font-family: $second-font;
+                @include fonts(42, 700, $teamplate-color, uppercase, 42px);
+                position: relative;
+                margin: 23px 0 7px;
+                &::after{
+                    position: absolute;
+                    text-transform: lowercase;
+                }
+                &.student{
+                    padding-right: 30px;
+                    &::after{
+                        content: 'k+';
+                        right: -20px;
+
+                    }
+                }
+                &.graduates{
+                    padding-right: 30px;
+                    &::after{
+                        content: '%';
+                        right: -11px;
+                    }
+                }
+            }
+        }
+        &__title{
+            h4{
+                color: $nav-color;
+     
+                @include respond-below(lg) {
+                    @include texts(20, 24)
+                  
+                }
+                
+            }
+        }
+    }
+}
